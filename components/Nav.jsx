@@ -37,7 +37,6 @@ export const Nav = ({ placeholder }) => {
 
   // search calander
   const handleSearch = useCallback(() => {
-    console.log(searchInput);
     router.push({
       pathname: "/search",
       query: {

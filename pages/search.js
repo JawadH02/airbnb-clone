@@ -1,9 +1,8 @@
 import { useRouter } from "next/router";
-import { Nav, Footer, InfoCard } from "../components/index";
+import { Nav, Footer, InfoCard, Map } from "../components/index";
 import { format } from "date-fns";
 
 const Search = ({ searchResults }) => {
-  console.log(searchResults);
   const router = useRouter();
   const { location, startDate, endDate, numberOfGuests } = router.query;
 
@@ -34,7 +33,10 @@ const Search = ({ searchResults }) => {
           </div>
           <div className="flex flex-col">
             {searchResults.map(
-              ({ img, location, title, description, star, price, total }, index) => (
+              (
+                { img, location, title, description, star, price, total },
+                index
+              ) => (
                 <InfoCard
                   img={img}
                   location={location}
@@ -49,8 +51,10 @@ const Search = ({ searchResults }) => {
             )}
           </div>
         </section>
+        <section className="hidden xl:inline-flex xl:min-w-[600px]">
+          <Map searchResults={searchResults} />
+        </section>
       </main>
-
       <Footer />
     </div>
   );
