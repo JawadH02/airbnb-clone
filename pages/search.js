@@ -25,11 +25,11 @@ const Search = ({ searchResults }) => {
           </h1>
 
           <div className="hidden lg:inline-flex mb-5 space-x-3 text-gray-800 whitespace-nowrap">
-            <p className="button">Cancellation Flexibility</p>
-            <p className="button">Type of Place</p>
-            <p className="button">Price</p>
-            <p className="button">Rooms and Bed</p>
-            <p className="button">More Filters</p>
+            <p className="button cursor-not-allowed">Cancellation Flexibility</p>
+            <p className="button cursor-not-allowed">Type of Place</p>
+            <p className="button cursor-not-allowed">Price</p>
+            <p className="button cursor-not-allowed">Rooms and Bed</p>
+            <p className="button cursor-not-allowed">More Filters</p>
           </div>
           <div className="flex flex-col">
             {searchResults.map(

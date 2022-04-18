@@ -72,15 +72,15 @@ export const Nav = ({ placeholder }) => {
           type="text"
           placeholder={placeholder || "Start your search"}
         />
-        <SearchIcon className="hidden md:inline-flex h-8 bg-red-400 text-white rounded-full p-2 cursor-pointer md:mx-2" />
+        <SearchIcon className="hidden md:inline-flex h-8 bg-red-400 text-white rounded-full p-2 cursor-not-allowed md:mx-2" />
       </div>
       {/* right */}
       <div className="flex items-center space-x-4 justify-end text-gray-500">
-        <p className="hidden md:inline-flex cursor-pointer">Become a host</p>
-        <GlobeAltIcon className="h-6 cursor-pointer" />
-        <div className="flex items-center space-x-2 p-2 border-2 rounded-full cursor-pointer">
+        <p className="hidden md:inline-flex cursor-not-allowed">Become a host</p>
+        <GlobeAltIcon className="h-6 cursor-not-allowed" />
+        <div className="flex items-center space-x-2 p-2 border-2 rounded-full cursor-not-allowed">
           <MenuIcon className="h-6" />
-          <UserCircleIcon className="h-6 cursor-pointer" />
+          <UserCircleIcon className="h-6 cursor-not-allowed" />
         </div>
       </div>
       {searchInput && (

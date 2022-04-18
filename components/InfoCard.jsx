@@ -1,6 +1,7 @@
 import Image from "next/image";
-import { HeartIcon } from "@heroicons/react/outline";
+import { HeartIcon } from "@heroicons/react/solid";
 import { StarIcon } from "@heroicons/react/solid";
+import { useState } from "react";
 
 export const InfoCard = ({
   img,
@@ -11,8 +12,9 @@ export const InfoCard = ({
   price,
   total,
 }) => {
+  const [heartColor, setHeartColor] = useState("");
   return (
-    <div className="flex py-7 px-2 pr-4 border-b cursor-pointer hover:opacity-80 hover:shadow-lg transition duration-200 ease-out first:border-t">
+    <div className="flex py-7 px-2 pr-4 border-b cursor-not-allowed hover:opacity-80 hover:shadow-lg transition duration-200 ease-out first:border-t">
       <figure className="relative h-24 w-40 md:h-52 md:w-80 flex-shrink-0">
         <Image
           src={img}
@@ -26,7 +28,7 @@ export const InfoCard = ({
       <div className="flex flex-col flex-grow pl-5">
         <div className="flex items-center justify-between">
           <p>{location}</p>
-          <HeartIcon className="h-7 cursor-pointer" />
+          <HeartIcon className={`h-7 cursor-pointer ${heartColor}`} onClick={() => setHeartColor((color) => (color === "" ? "text-red-600" : ""))} />
         </div>
         <h4 className="text-xl">{title}</h4>
         <div className="border-b w-10 pt-2"></div>
