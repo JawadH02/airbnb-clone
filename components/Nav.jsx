@@ -68,7 +68,7 @@ export const Nav = ({ placeholder }) => {
         <input
           value={searchInput}
           onChange={(event) => setSearchInput(event.target.value)}
-          className="pl-5 flex-grow bg-transparent outline-none text-sm text-gray-600 placeholder-gray-400"
+          className="pl-5 flex-grow bg-transparent outline-none text-sm text-gray-600 md:placeholder-gray-400 placeholder-white"
           type="text"
           placeholder={placeholder || "Start your search"}
         />
